@@ -1,0 +1,2 @@
+!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?o(exports):"function"==typeof define&&define.amd?define(["exports"],o):o((e||self).sdkDemo={})}(this,function(e){var o={module:"commonjs",declaration:!0,removeComments:!0,allowSyntheticDefaultImports:!0,target:"es2017",sourceMap:!1,outDir:"./dist",baseUrl:"./",incremental:!0},t=["src/**/*"],n=["node_modules","test","lib","**/*spec.ts"],i={compilerOptions:o,include:t,exclude:n};e.compilerOptions=o,e.default=i,e.exclude=n,e.include=t});
+//# sourceMappingURL=index.umd.js.map
