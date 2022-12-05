@@ -3,9 +3,9 @@ type Config = {
     baseUrl?: string;
 };
 export declare abstract class Base {
-    private apikey;
+    private apiKey;
     private baseUrl;
     constructor(config: Config);
-    protected invoke<T>(endpoint: string, options?: RequestInit): Promise<T>;
+    protected request<T>(endpoint: string, options?: RequestInit): Promise<T>;
 }
 export {};

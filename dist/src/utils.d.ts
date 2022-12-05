@@ -1,1 +1,1 @@
-export declare function applyMixins(derivedCtor: any, constructors: any[]): void;
+export declare function applyMixins(derivedCtor: any, baseCtors: any[]): void;

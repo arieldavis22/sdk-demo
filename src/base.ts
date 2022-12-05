@@ -5,23 +5,21 @@ type Config = {
   baseUrl?: string;
 };
 
-// create base class (abstract so cant be called directly)
 export abstract class Base {
-  private apikey: string;
+  private apiKey: string;
   private baseUrl: string;
+
   constructor(config: Config) {
-    this.apikey = config.apiKey;
-    this.baseUrl = config.baseUrl || "https://jsonplaceholder.typeicode.com";
+    this.apiKey = config.apiKey;
+    this.baseUrl = config.baseUrl || "https://jsonplaceholder.typicode.com";
   }
 
-  protected invoke<T>(endpoint: string, options?: RequestInit): Promise<T> {
+  protected request<T>(endpoint: string, options?: RequestInit): Promise<T> {
     const url = `${this.baseUrl}${endpoint}`;
-
     const headers = {
       "Content-Type": "application/json",
-      "api-key": this.apikey,
+      "api-key": this.apiKey,
     };
-
     const config = {
       ...options,
       headers,
@@ -30,9 +28,8 @@ export abstract class Base {
     return fetch(url, config).then((response) => {
       if (response.ok) {
         return response.json();
-      } else {
-        throw new Error(response.statusText);
       }
+      throw new Error(response.statusText);
     });
   }
 }

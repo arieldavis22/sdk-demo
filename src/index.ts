@@ -1,5 +1,5 @@
 import { Base } from "./base";
-import { Posts } from "./post";
+import { Posts } from "./posts";
 import { applyMixins } from "./utils";
 
 class Typicode extends Base {}
