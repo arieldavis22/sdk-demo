@@ -3,6 +3,7 @@ type Config = {
   baseUrl?: string;
 };
 
+// create base class (abstract so cant be called directly)
 export abstract class Base {
   private apikey: string;
   private baseUrl: string;
